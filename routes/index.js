@@ -5,7 +5,7 @@ const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 
 const student = require('../models/student');
 // login Page
-router.get('/', forwardAuthenticated, (req, res) => res.render('info'));
+router.get('/', forwardAuthenticated, (req, res) => res.render('login'));
 
 //info
 router.get('/info', ensureAuthenticated, (req, res) =>
