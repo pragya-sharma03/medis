@@ -1,0 +1,38 @@
+<%- include("header") -%>
+  <div>
+    <ol class="progtrckr" data-progtrckr-steps="5">
+      <li class="progtrckr-done">Basic Details</li>
+      <li class="progtrckr-done">Library Fine Status</li>
+      <li id = "status1" class="progtrckr-done">Academic Fee</li>
+      <li id = "status2" class="progtrckr-todo">Hostel Fee</li>
+      <li id = "status3" class="progtrckr-todo">Registration Done!!</li>
+    </ol>
+  </div>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Hostel Fee</h2>
+                    <form action="/hostel" method="POST" >
+                        <div class="input-group">
+                             <label class="label">Roll Number</label>
+                             <input class="input--style-4" type="text" name="studentRollno">
+                        </div>
+                        <div class="input-group">
+                            <label class="label">DU Hostel Number: </label>
+                            <input class="input--style-4" type="text" name="studentDUHostel"><br />
+                            <!-- <input type="file" name="myFile"  class="form-control"> -->
+                        </div>
+
+                        <div class="align">
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="next">Next</button>
+                            <!-- <button class="btn btn--radius-2 btn--blue" type="next">Next</button> -->
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<%- include("footer") -%>

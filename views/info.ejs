@@ -1,0 +1,52 @@
+<%- include("header") -%>
+
+  <div>
+    <ol class="progtrckr" data-progtrckr-steps="5">
+      <li class="progtrckr-todo">Basic Details</li>
+      <li class="progtrckr-todo">Library Fine Status</li>
+      <li id="status1" class="progtrckr-todo">Academic Fee</li>
+      <li id="status2" class="progtrckr-todo">Hostel Fee</li>
+      <li id = "status3" class="progtrckr-todo">Registration Done!!</li>
+    </ol>
+  </div>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Registration Form</h2>
+                    <form name="loginForm" action="/info" method="POST">
+                        <div class="input-group">
+                             <label class="label">Name</label>
+                             <input class="input--style-4" type="text" name="studentName" placeholder="" autocomplete="" pattern="[a-zA-Z]+([\s][a-zA-Z]+)*" title="Only alphabets(a-z,A-Z) and space(  ) allowed E.g. Rajesh Kumar" >
+                        </div>
+                        <div class="input-group">
+                            <label class="label">Branch</label>
+                            <input class="input--style-4" type="text" name="studentBranch" placeholder="" autocomplete="" pattern="[a-zA-Z]+([\s][a-zA-Z]+)*" title="Only alphabets(a-z,A-Z) and space(  ) allowed E.g. Information Technology" >
+                        </div>
+                        <div class="input-group">
+                            <label class="label">Roll Number</label>
+                            <input class="input--style-4" type="text" name="studentRollno" placeholder="" autocomplete="" >
+                        </div>
+                        <div class="input-group">
+                            <label class="label">Mobile Number</label>
+                            <input class="input--style-4" type="number"  max="9999999999" name="studentMobile" id="phone"  placeholder="" autocomplete="" title="E.g. 94xxxxxx34">
+                    	</div>
+                        <div class="input-group">
+                            <label class="label">Email Id </label>
+                            <input class="input--style-4" type="Email" name="studentEmail" placeholder=""  autocomplete="" >
+                        </div>
+
+                        <div class="align">
+                        <div class="p-t-15">
+                          <button type="submit"  class="btn btn--radius-2 btn--blue" type="submit" name="button">Submit</button>
+                          <!-- <input type="submit" name="" value="su" class="btn btn--radius-2 btn--blue" href="library"> -->
+
+
+
+                        </div></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<%- include("footer") -%>

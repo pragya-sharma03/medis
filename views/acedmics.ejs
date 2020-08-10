@@ -1,0 +1,43 @@
+<%- include("header") -%>
+
+  <div>
+    <ol class="progtrckr" data-progtrckr-steps="5">
+      <li class="progtrckr-done">Basic Details</li>
+      <li class="progtrckr-done">Library Fine Status</li>
+      <li id = "status1" class="progtrckr-todo">Academic Fee</li>
+      <li id = "status2" class="progtrckr-todo">Hostel Fee</li>
+      <li id = "status3" class="progtrckr-todo">Registration Done!!</li>
+    </ol>
+  </div>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Academics Fee</h2>
+                    <form action="/acedmics" method="POST" >
+                        <div class="input-group">
+                             <label class="label">Roll Number</label>
+                             <input class="input--style-4" type="text" name="studentRollno">
+                        </div>
+                        <div class="input-group">
+                            <label class="label">DU Academic Number: </label>
+                            <input class="input--style-4" type="text" name="studentDUAcd"><br />
+                            <!-- <input type="file" name="myFile"  class="form-control"> -->
+                        </div>
+
+                        <div class="input-group">
+                            <label class="label">Amount </label>
+                            <input class="input--style-4" type="text" name="studentDUAcdAmt">
+                        </div>
+                         <div class="align">
+                        <div class="p-t-15">
+                            <!-- <a href="hostel_fee" class="btn btn--radius-2 btn--blue">Next</a> -->
+                            <button class="btn btn--radius-2 btn--blue" type="next">Next</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include("footer") -%>

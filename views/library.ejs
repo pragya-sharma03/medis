@@ -1,0 +1,41 @@
+<%- include("header") -%>
+
+  <div>
+    <ol class="progtrckr" data-progtrckr-steps="5">
+      <li class="progtrckr-done">Basic Details</li>
+      <li class="progtrckr-todo">Library Fine Status</li>
+      <li id = "status1" class="progtrckr-todo">Academic Fee</li>
+      <li id = "status2" class="progtrckr-todo">Hostel Fee</li>
+      <li id = "status3" class="progtrckr-todo">Registration Done!!</li>
+    </ol>
+  </div>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Library Fine Status</h2>
+                    <form name="libraryForm"  action="/library" method="POST">
+                        <div class="input-group">
+                             <label class="label">Roll Number</label>
+                             <input class="input--style-4" type="text" name="studentRollno" >
+                        </div>
+                        <div class="input-group">
+                            <label class="label">Branch</label>
+                            <input class="input--style-4" type="text" name="studentBranch">
+                        </div>
+
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--green" type="next">Check</button>
+                        </div>
+                        <div class="align">
+                        <div class="p-t-15">
+                            <!-- <a href="acedmic_fee" class="btn btn--radius-2 btn--blue">Next</a> -->
+                            <button class="btn btn--radius-2 btn--blue">Next</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>1
+        </div>
+    </div>
+<%- include("footer") -%>
