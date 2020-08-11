@@ -37,7 +37,7 @@ router.get("/library" , function(req,res){
 });
 router.post('/library',function(req,res){
  const library= new student({
-   name:req.body.studentName,
+   rollno:req.body.studentRollno,
    branch:req.body.studentBranch
  });
  library.save(function(err){
