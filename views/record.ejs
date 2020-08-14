@@ -1,0 +1,49 @@
+
+<%- include("header") -%>
+            <div>
+                <center>
+                    <table border="2px">
+                      <tr>
+                        <th>Name</th>
+                        <th>Branch</th>
+                        <th>Roll Number</th>
+                        <th>Mobile Number </th>
+                        <th>Gmail</th>
+                        <th>DU Acadmics Number</th>
+                        <th>Acedmics Amount</th>
+                        <th>Du Hostel Number </th>
+                        <th>Hostel Amount</th>
+                        </tr>
+                        <%  newstudent.forEach(function(s){ %>
+                            <tr>
+                                <td>
+                                  <%=s.studentName%>
+                                </td>
+                                <td>
+                                    <%=s.studentBranch%>
+                                </td>
+                                <td>
+                                  <%=s.studentRollno%>
+                                </td>
+                                <td>
+                                    <%=s.studentMobile%>
+                                </td>
+                                <td>
+                                  <%=s.studentEmail%>
+                                </td>
+                                <td>
+                                    <%=s.studentDUAcd%>
+                                </td>
+                                <td>
+                                  <%=s.studentDUAcdAmt%>
+                                </td>
+                                <td>
+                                    <%=s.studentDUHostel%>
+                                </td>
+
+                                <% }); %>
+                    </table>
+                </center>
+            </div>
+
+<%- include("footer") -%>

@@ -4,19 +4,19 @@ const mongoose = require('mongoose');
 const studentSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    //required: true
   },
   branch: {
     type: String,
-    required: true
+    //required: true
   },
   rollno: {
     type: Number,
-    required: true
+    //required: true
   },
   email: {
     type: String,
-    required: true
+    //required: true
   }
 });
 // const studentSchema = ({

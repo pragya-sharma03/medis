@@ -37,7 +37,7 @@ router.get("/library" , function(req,res){
 });
 router.post('/library',function(req,res){
  const library= new student({
-   name:req.body.studentName,
+   rollno:req.body.studentRollno,
    branch:req.body.studentBranch
  });
  library.save(function(err){
@@ -74,10 +74,13 @@ router.post('/hostel',function(req,res){
  });
  hostel.save(function(err){
    if (!err){
-       res.redirect("/post");
+       res.redirect("/success");
    }
  });
 });
 
+router.get("/success" , function(req,res){
+   res.render("success");
+});
 
 module.exports = router;
