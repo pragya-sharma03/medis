@@ -8,6 +8,7 @@ const studentSchema = new mongoose.Schema({
   },
   branch: {
     type: String,
+<<<<<<< HEAD
     //required: true
   },
   rollno: {
@@ -17,6 +18,17 @@ const studentSchema = new mongoose.Schema({
   email: {
     type: String,
     //required: true
+=======
+   // required: true
+  },
+  rollno: {
+    type: Number,
+   // required: true
+  },
+  email: {
+    type: String,
+   // required: true
+>>>>>>> 9f9a5878bdba5cd7851750796544112c8f7c4efc
   }
 });
 // const studentSchema = ({
