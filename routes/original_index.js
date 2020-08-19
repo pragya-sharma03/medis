@@ -3,17 +3,17 @@ const express = require('express');
 const router = express.Router();
 const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 
-const Student = require('../models/student');
+const student = require('../models/student');
 // login Page
-
+router.get('/', forwardAuthenticated, (req, res) => res.render('login'));
 
 //info
-router.get("/" , function(req,res){
-   res.render("info");
-});
+router.get('/info', ensureAuthenticated, (req, res) =>
+  res.render('info')
+);
 ///////////////////
 router.post('/info',function(req,res){
- const student= new Student({
+ const newstudent= new student({
    name:req.body.studentName,
    branch:req.body.studentBranch,
    rollno:req.body.studentRollno,
@@ -24,16 +24,13 @@ router.post('/info',function(req,res){
    DUHostel:req.body.studentDUHostel,
    DUHostelAmt:req.body.studentDUHostelAmt
  });
- student.save(function(err){
+ newstudent.save(function(err){
    if (!err){
-       res.redirect("/record");
+       res.redirect("/library");
    }
  });
 });
 
-router.get("/record" , function(req,res){
-   res.render("record");
-});
 
 router.get("/library" , function(req,res){
    res.render("library");
